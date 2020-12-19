@@ -1,0 +1,369 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	
+	/* background: #1c1026; */
+}
+
+.layout {
+    font-family: 'Ubuntu', sans-serif;
+	color: #fff;
+	background:url("https://www.transparenttextures.com/patterns/stardust.png") repeat fixed #1c1026;
+}
+.container {
+	max-width: 90%;
+	margin: 0 auto;
+}
+.button {
+	border: 2px solid #f1d64f;
+	color: #f1d64f;
+}
+.button:hover {
+	background-color: #f1d64f;
+	color: #1c1026;
+}
+.article{
+	background:url("https://www.transparenttextures.com/patterns/stardust.png") repeat fixed #1c1026;
+}
+.title {
+	color: #f1d64f;
+}
+
+
+/*  markdown  */
+
+.markdown {
+	line-height: 1.4;
+	width: 850px;
+	max-width: 100%;
+  }
+  
+  .twitter-embed {
+	margin: 0 auto;
+	max-width: 100%;
+  }
+  
+  .markdown > *  {
+	margin-bottom: 1.4rem;
+  }
+  
+  .markdown h1, h2, h3, h4, h5, h6, p {
+	text-rendering: optimizeLegibility;
+  }
+  
+  .markdown h1, h2, h3, h4, h5, h6, strong {
+	font-weight: 700;
+  }
+  
+  .markdown h1 {
+	font-size: 2.4rem;
+  }
+  
+  .markdown h2 {
+	font-size: 2rem;
+  }
+  
+  .markdown h3 {
+	font-size: 1.8rem;
+  }
+  
+  .markdown h4 {
+	font-size: 1.6rem;
+  }
+  
+  .markdown h5 {
+	font-size: 1.4rem;
+  }
+  
+  .markdown h6 {
+	font-size: 1rem;
+  }
+  
+  .markdown blockquote {
+	padding: 22px;
+	border-radius: 5px;
+	border: 2px solid;
+	border-left: 10px solid #fffffe;
+  }
+  
+  .markdown table {
+	border: 2px solid #fffffe;
+  }
+	.markdown table thead {
+	  border-bottom: 2px solid #fffffe;
+	}
+	.markdown table th {
+	  border-right: 2px solid #fffffe;
+	}
+	.markdown table tr {
+	  padding: 20px;
+	}
+	.markdown table td {
+	  border-right: 2px solid #fffffe;
+	  padding: 10px;
+	}
+  
+  .markdown img, .markdown video {
+	display: block;
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+  }
+  
+  .markdown figure {
+	max-width: 100%;
+	margin: 2rem auto;
+	text-align: center
+  }
+  
+  .markdown figure img {
+	margin-bottom: 0
+  }
+  
+  .markdown figcaption {
+	padding-top: .75rem;
+  }
+  
+  .markdown hr {
+	border: 0;
+	border-bottom: 1px solid var(--color-border);
+	margin: 2rem 0
+  }
+  
+  .markdown h2,.markdown h3,.markdown h4 {
+	position: relative;
+	margin-bottom: .5em
+  }
+  
+  .markdown h2:first-child,.markdown h3:first-child,.markdown h4:first-child {
+	margin-top: 0;
+	font-size: 32px;
+  }
+  
+  .markdown h2:focus>.heading-anchor,.markdown h2:hover>.heading-anchor,.markdown h3:focus>.heading-anchor,.markdown h3:hover>.heading-anchor,.markdown h4:focus>.heading-anchor,.markdown h4:hover>.heading-anchor {
+	opacity: .75
+  }
+  
+  .markdown .heading-anchor {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: -1em;
+	width: 1em;
+	opacity: 0
+  }
+  
+  .markdown .heading-anchor:focus,.markdown .heading-anchor:hover {
+	opacity: 1!important
+  }
+  
+  @media (min-width: 670px) {
+	.markdown .heading-anchor {
+		display:block
+	}
+  }
+
+  /* code styles */
+
+  code[class*="language-"],
+ pre[class*="language-"] {
+   color: white;
+   background: none;
+   font-family: 'Fira Code', monospace;
+   font-size: .85em;
+   text-align: left;
+   text-shadow: 0 -.1em .2em black;
+   white-space: pre;
+   word-spacing: normal;
+   word-break: normal;
+   word-wrap: normal;
+   line-height: 1.5;
+ 
+   -moz-tab-size: 4;
+   -o-tab-size: 4;
+   tab-size: 4;
+ 
+   -webkit-hyphens: none;
+   -moz-hyphens: none;
+   -ms-hyphens: none;
+   hyphens: none;
+ }
+ 
+ pre[class*="language-"],
+ :not(pre) > code[class*="language-"] {
+   background:  #141414 ;
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+   border-radius: .5em;
+   border: .3em solid hsl(0, 0%, 33%); /* #282A2B */
+   box-shadow: 1px 1px .5em black inset;
+   margin: .5em 0;
+   overflow: auto;
+   padding: 1em;
+ }
+ 
+ pre[class*="language-"]::-moz-selection {
+   /* Firefox */
+   background: hsl(200, 4%, 16%); /* #282A2B */
+ }
+ 
+ pre[class*="language-"]::selection {
+   /* Safari */
+   background: hsl(200, 4%, 16%); /* #282A2B */
+ }
+ 
+ /* Text Selection colour */
+ pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+ code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+   text-shadow: none;
+   background: hsla(0, 0%, 93%, 0.15); /* #EDEDED */
+ }
+ 
+ pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+ code[class*="language-"]::selection, code[class*="language-"] ::selection {
+   text-shadow: none;
+   background: hsla(0, 0%, 93%, 0.15); /* #EDEDED */
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+   border-radius: .3em;
+   border: .13em solid hsl(0, 0%, 33%); /* #545454 */
+   box-shadow: 1px 1px .3em -.1em black inset;
+   padding: .15em .2em .05em;
+   font-size: .70em;
+   white-space: normal;
+   color: var(--pink-color);
+ }
+
+ 
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+   color: hsl(0, 0%, 47%); /* #777777 */
+ }
+ 
+ .token.punctuation {
+   opacity: .7;
+ }
+ 
+ .token.namespace {
+   opacity: .7;
+ }
+ 
+ .token.tag,
+ .token.boolean,
+ .token.number,
+ .token.deleted {
+   color: hsl(14, 58%, 55%); /* #CF6A4C */
+ }
+ 
+ .token.keyword,
+ .token.property,
+ .token.selector,
+ .token.constant,
+ .token.symbol,
+ .token.builtin {
+   color: hsl(53, 89%, 79%); /* #F9EE98 */
+ }
+ 
+ .token.attr-name,
+ .token.attr-value,
+ .token.string,
+ .token.char,
+ .token.operator,
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string,
+ .token.variable,
+ .token.inserted {
+   color: hsl(76, 21%, 52%); /* #8F9D6A */
+ }
+ 
+ .token.atrule {
+   color: hsl(218, 22%, 55%); /* #7587A6 */
+ }
+ 
+ .token.regex,
+ .token.important {
+   color: hsl(42, 75%, 65%); /* #E9C062 */
+ }
+ 
+ .token.important,
+ .token.bold {
+   font-weight: bold;
+ }
+ .token.italic {
+   font-style: italic;
+ }
+ 
+ .token.entity {
+   cursor: help;
+ }
+ 
+ pre[data-line] {
+   padding: 1em 0 1em 3em;
+   position: relative;
+ }
+ 
+ /* Markup */
+ .language-markup .token.tag,
+ .language-markup .token.attr-name,
+ .language-markup .token.punctuation {
+   color: hsl(33, 33%, 52%); /* #AC885B */
+ }
+ 
+ /* Make the tokens sit above the line highlight so the colours don't look faded. */
+ .token {
+   position: relative;
+   z-index: 1;
+ }
+ 
+ .line-highlight {
+   background: hsla(0, 0%, 33%, 0.25); /* #545454 */
+   background: linear-gradient(to right, hsla(0, 0%, 33%, .1) 70%, hsla(0, 0%, 33%, 0)); /* #545454 */
+   border-bottom: 1px dashed hsl(0, 0%, 33%); /* #545454 */
+   border-top: 1px dashed hsl(0, 0%, 33%); /* #545454 */
+   left: 0;
+   line-height: inherit;
+   margin-top: 0.75em; /* Same as .prism’s padding-top */
+   padding: inherit 0;
+   pointer-events: none;
+   position: absolute;
+   right: 0;
+   white-space: pre;
+   z-index: 0;
+ }
+ 
+ .line-highlight:before,
+ .line-highlight[data-end]:after {
+   background-color: hsl(215, 15%, 59%); /* #8794A6 */
+   border-radius: 999px;
+   box-shadow: 0 1px white;
+   color: hsl(24, 20%, 95%); /* #F5F2F0 */
+   content: attr(data-start);
+   font: bold 65%/1.5 sans-serif;
+   left: .6em;
+   min-width: 1em;
+   padding: 0 .5em;
+   position: absolute;
+   text-align: center;
+   text-shadow: none;
+   top: .4em;
+   vertical-align: .3em;
+ }
+ 
+ .line-highlight[data-end]:after {
+   bottom: .4em;
+   content: attr(data-end);
+   top: auto;
+ }
