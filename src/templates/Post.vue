@@ -1,43 +1,41 @@
 <template>
-	<Layout>
-		<div class="article flex h-full text-gray-300 ">
-			<SidebarIcons class="invisible lg:visible" />
-			<div class="lg:px-36  w-full">
-				<article class="lg:mx-16">
-					<header class="text-center my-8">
-						<h2 class="font-bold text-3xl text-gray-200 mt-10">
-							{{ $page.post.title }}
-						</h2>
-						<p class="mt-4">Published on {{ $page.post.date }}</p>
-					</header>
+  <Layout>
+    <div class="article flex h-full text-gray-800 ">
+      <SidebarIcons class="invisible lg:visible" />
+      <div class="lg:px-36 w-full lg:mx-60">
+        <article class="bg-white lg:px-8 px-4 mt-4 py-1 shadow-xl rounded-xl">
+          <header class="my-8 text-center">
+            <h2 class="font-bold text-3xl text-gray-900 mt-10">
+              {{ $page.post.title }}
+            </h2>
+            <p class="mt-4">Published on {{ $page.post.date }}</p>
+          </header>
 
-					<div class="post__header">
-						<g-image
-							alt="Cover image"
-							v-if="$page.post.cover_image"
-							:src="$page.post.cover_image"
-						/>
-					</div>
+          <div class="post__header">
+            <g-image
+              alt="Cover image"
+              v-if="$page.post.cover_image"
+              :src="$page.post.cover_image"
+            />
+          </div>
 
-					<div class="markdown" v-html="$page.post.content"></div>
+          <div class="markdown" v-html="$page.post.content"></div>
 
-					<div class="post__footer">
-						<PostTags :post="$page.post" />
-					</div>
-					<div
-						class="thanks w-full bg-white py-4 text-center rounded shadow font-semibold text-xl"
-					>
-						<p class=" ">Thanks for Reading</p>
-					</div>
-					<RecentPost />
-				</article>
-				<div class="">
-					<Footer />
-				</div>
-			</div>
-			<SidebarMail class="invisible lg:visible" />
-		</div>
-	</Layout>
+          <div class="post__footer">
+            <PostTags :post="$page.post" />
+          </div>
+          <div class="thanks w-full py-4 mt-4 text-center rounded shadow">
+            <p class="font-semibold text-white text-xl">Thanks for Reading!</p>
+          </div>
+          <RecentPost />
+        </article>
+        <div class="">
+          <Footer />
+        </div>
+      </div>
+      <SidebarMail class="invisible lg:visible" />
+    </div>
+  </Layout>
 </template>
 
 <script>
@@ -51,22 +49,22 @@ import RecentPost from "~/components/created/RecentPost.vue";
 import Footer from "~/components/created/Footer.vue";
 
 export default {
-	metaInfo: {
-		title: "Blog",
-	},
-	components: {
-		PostTags,
-		SidebarIcons,
-		SidebarMail,
-		RecentPost,
-		Footer,
-	},
+  metaInfo: {
+    title: "Blog",
+  },
+  components: {
+    PostTags,
+    SidebarIcons,
+    SidebarMail,
+    RecentPost,
+    Footer,
+  },
 };
 </script>
 
 <style scoped>
 .thanks {
-	color: #1c1026;
+  color: #1c1026;
 }
 </style>
 

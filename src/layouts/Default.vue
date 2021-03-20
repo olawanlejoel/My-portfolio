@@ -1,8 +1,8 @@
 <template>
-	<div class="layout">
-		<Header />
-		<div class="container pt-20"><slot /></div>
-	</div>
+  <div class="layout">
+    <Header />
+    <div class="container pt-20"><slot /></div>
+  </div>
 </template>
 
 <static-query>
@@ -17,9 +17,9 @@ query {
 import Header from "~/components/created/Header.vue";
 
 export default {
-	components: {
-		Header,
-	},
+  components: {
+    Header,
+  },
 };
 </script>
 
