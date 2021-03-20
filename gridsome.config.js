@@ -7,7 +7,7 @@
 module.exports = {
 	siteName: "Joel Olawanle's Portfolio",
 	siteDescription:
-		"A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.",
+		"A simple, personal portfolio built & designed by Joel Olawanle.",
 
 	plugins: [
 		{
