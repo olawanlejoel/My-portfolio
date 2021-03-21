@@ -2,14 +2,17 @@
   <Layout>
     <div class="article flex h-full text-gray-800 ">
       <SidebarIcons class="invisible lg:visible" />
-      <div class="lg:px-36 w-full lg:mx-60">
-        <article class="bg-white lg:px-8 px-4 mt-4 py-1 shadow-xl rounded-xl">
+      <div class="lg:px-36 w-full lg:mx-auto lg:w-3/4">
+        <article class="bg-white lg:px-8 px-4 mt-4 py-1 shadow-xl rounded">
           <header class="my-8 text-center">
-            <h2 class="font-bold text-3xl text-gray-900 mt-10">
+            <h2 class="font-bold lg:text-3xl text-2xl text-gray-900 mt-10">
               {{ $page.post.title }}
             </h2>
             <p class="mt-4">Published on {{ $page.post.date }}</p>
           </header>
+          <div class="flex justify-center w-full">
+            <hr class="w-3/4 h-0.5 bg-gray-500 mb-8 center" />
+          </div>
 
           <div class="post__header">
             <g-image

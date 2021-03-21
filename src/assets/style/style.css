@@ -32,6 +32,15 @@ body {
   background-color: #f1d64f;
   color: #1c1026;
 }
+
+.button2 {
+  border: 2px solid #1c1026;
+  color: #1c1026;
+}
+.button2:hover {
+  background-color: #1c1026;
+  color: #f1d64f;
+}
 .article {
   background: url("https://www.transparenttextures.com/patterns/stardust.png")
     repeat fixed #1c1026;
@@ -127,6 +136,29 @@ strong {
   border-radius: 5px;
   background-color: #ddd;
   border-left: 5px solid #1c1026;
+}
+
+.markdown em {
+  font-style: italic;
+}
+
+.markdown ul {
+  list-style-type: disc;
+  margin-left: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.markdown ul li {
+  margin-bottom: 0.6em;
+}
+.markdown ol {
+  list-style-type: decimal;
+  margin-left: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.markdown ol li {
+  margin-bottom: 0.6em;
 }
 
 .markdown table {

@@ -19,6 +19,15 @@
         </g-link>
       </article>
     </div>
+    <div class="flex justify-center w-full">
+      <g-link to="/blog/">
+        <button
+          class="button2 mt-8 font-bold outline-none py-2 hover:shadow-xl px-4 rounded transition duration-500 ease-in-out transform hover:-translate-y-2"
+        >
+          Visit Blog for more...
+        </button></g-link
+      >
+    </div>
   </div>
 </template>
 
