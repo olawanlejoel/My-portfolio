@@ -46,7 +46,6 @@ query Post ($id: ID!) {
   post: post (id: $id) {
     title
     path
-    excerpt
     date (format: "MMMM, DD YYYY")
     timeToRead
     tags {
@@ -78,7 +77,7 @@ export default {
       meta: [
         {
           name: "description",
-          content: this.$page.post.excerpt,
+          content: this.$page.post.description,
         },
         {
           property: "og:title",
@@ -86,7 +85,9 @@ export default {
         },
         {
           name: "twitter:card",
-          content: this.$page.post.image ? "summary_large_image" : "summary",
+          content: this.$page.post.cover_image
+            ? "summary_large_image"
+            : "summary",
         },
         {
           name: "twitter:creator",
@@ -94,11 +95,11 @@ export default {
         },
         {
           property: "og:description",
-          cotent: this.$page.post.excerpt,
+          cotent: this.$page.post.description,
         },
         {
           property: "og:image",
-          content: this.$page.post.image || "",
+          content: this.$page.post.cover_image || "",
         },
       ],
     };
