@@ -33,7 +33,7 @@
 
 <static-query>
 query {
-  posts: allPost(sortBy: "date", order: DESC, limit:2, filter:{published:{eq:true}}) {
+  posts: allPost(sortBy: "date", order: DESC, limit:4, filter:{published:{eq:true}}) {
     edges {
       node {
         id
