@@ -41,6 +41,26 @@
   </Layout>
 </template>
 
+<page-query>
+query Post ($id: ID!) {
+  post: post (id: $id) {
+    title
+    path
+    excerpt
+    date (format: "MMMM, DD YYYY")
+    timeToRead
+    tags {
+      id
+      title
+      path
+    }
+    description
+    content
+    cover_image (width: 860, blur: 10)
+  }
+}
+</page-query>
+
 <script>
 import PostTags from "~/components/PostTags.vue";
 
@@ -52,8 +72,36 @@ import RecentPost from "~/components/created/RecentPost.vue";
 import Footer from "~/components/created/Footer.vue";
 
 export default {
-  metaInfo: {
-    title: "Blog",
+  metaInfo() {
+    return {
+      title: this.$page.post.title,
+      meta: [
+        {
+          name: "description",
+          content: this.$page.post.excerpt,
+        },
+        {
+          property: "og:title",
+          content: this.$page.post.title,
+        },
+        {
+          name: "twitter:card",
+          content: this.$page.post.image ? "summary_large_image" : "summary",
+        },
+        {
+          name: "twitter:creator",
+          content: "@olawanle_joel",
+        },
+        {
+          property: "og:description",
+          cotent: this.$page.post.excerpt,
+        },
+        {
+          property: "og:image",
+          content: this.$page.post.image || "",
+        },
+      ],
+    };
   },
   components: {
     PostTags,
@@ -70,22 +118,3 @@ export default {
   color: #1c1026;
 }
 </style>
-
-<page-query>
-query Post ($id: ID!) {
-  post: post (id: $id) {
-    title
-    path
-    date (format: "MMMM, DD YYYY")
-    timeToRead
-    tags {
-      id
-      title
-      path
-    }
-    description
-    content
-    cover_image (width: 860, blur: 10)
-  }
-}
-</page-query>
