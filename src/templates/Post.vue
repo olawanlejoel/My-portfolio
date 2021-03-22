@@ -74,34 +74,6 @@ export default {
   metaInfo() {
     return {
       title: this.$page.post.title,
-      meta: [
-        {
-          name: "description",
-          content: this.$page.post.description,
-        },
-        {
-          property: "og:title",
-          content: this.$page.post.title,
-        },
-        {
-          name: "twitter:card",
-          content: this.$page.post.cover_image
-            ? "summary_large_image"
-            : "summary",
-        },
-        {
-          name: "twitter:creator",
-          content: "@olawanle_joel",
-        },
-        {
-          property: "og:description",
-          cotent: this.$page.post.description,
-        },
-        {
-          property: "og:image",
-          content: this.$page.post.cover_image || "",
-        },
-      ],
     };
   },
   components: {
